@@ -23,4 +23,8 @@ def check_budget(request):
 def about(request):
     return render(request, 'budget/about.html')
 
+
+def notabout(request):
+    pass
+
 # Create your views here.

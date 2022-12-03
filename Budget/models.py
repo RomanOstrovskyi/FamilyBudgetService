@@ -11,7 +11,7 @@ class Budget(models.Model):
     USD_amount = models.IntegerField(blank=False, default=0)
     Date_created = models.DateTimeField(auto_now_add=True)
     Creator = models.ForeignKey(User, on_delete=models.CASCADE)
-    # Family = models.ForeignKey(Family, default=1, on_delete=models.CASCADE)
+    Family = models.ForeignKey(Family, default=1, on_delete=models.CASCADE)
 
     def __str__(self):
 

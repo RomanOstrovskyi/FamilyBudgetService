@@ -8,6 +8,7 @@ from django.core.validators import MinLengthValidator
 
 class Profile(models.Model):
 
+    User = models.OneToOneField(User, on_delete=models.SET_NULL, related_name='profile', null=True)
     SpendingLimit = models.IntegerField(blank=False, default=0)
     RegisteredDay = models.DateTimeField(auto_now_add=True)
     Family = models.ForeignKey('Family', on_delete=models.CASCADE)
